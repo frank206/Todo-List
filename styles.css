@@ -1,0 +1,37 @@
+.wrapper{
+    display:flex;
+    align-items:stretch;
+    
+}
+
+#sidebar{
+    min-width:250px;
+    width:200px;
+    position:fixed;
+    left:0;
+    top:70px;
+    min-height:100%;
+    
+}
+.table{
+    margin:0px auto;
+    float:none;
+    width:50%;
+    text-align: center;
+}
+
+#addBtn{
+    display:flex;
+    position:relative;
+    left:1560px;
+}
+
+table td{
+    border-style:none;
+}
+
+table{
+    table-layout:fixed;
+    word-wrap:break-word;
+}
+

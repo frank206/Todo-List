@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo-List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-xl navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"  data-bs-toggle ="collapse" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="true">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg></a>
+        <h1 class="d-flex justify-content-center">Todo List</h1>
+        <form class="d-flex ml-auto">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="wrapper">
+        <div class="border-end bg-blue collapse-horizontal collapse show" id="sidebar">
+          <div class="list-group  list-group-flush">
+              <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Inbox</a>
+              <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Today</a>
+              <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Upcoming</a>
+              <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Projects</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="container-fluid">
+    <button type="button ml-auto" class="btn btn-danger" id="addBtn" data-bs-toggle="modal" data-bs-target="#modal">Add Project</button>
+    <div class="table-responsive">
+      <table class="table text-center table-hover table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+<div class="modal fade" id="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-title">Add Project</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <div class="col-auto">
+              <label for="project-name" class="form-label">Project Name</label>
+              <input type="text" class="form-control" id="projectInput" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea class="form-control" id="projectDetails" rows="10" required></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-auto">
+              <label for="date" class="form-label">Due Date</label>
+              <input type="date" class="form-control" id="dateInput" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-auto">
+              <label for="Priority" class="form-label">Priority</label>
+              <select class="form-select" aria-label="Default select" id="priority" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+        <button id ="btn1" type="submit" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js" charset="UTF-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
